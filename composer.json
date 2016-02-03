@@ -1,0 +1,23 @@
+{
+    "name": "benrowe/unzip-filter",
+    "description": "Extends from php's native zip component. Allows you to filter what is extracted.",
+    "keywords": ["zip", "filter"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Rowe",
+            "email": "ben.rowe.83@gmail.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.5.9",
+    },
+    "require-dev": {
+      "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Benrowe\\UnzipFilter\\": "src/"
+        }
+    }
+}
