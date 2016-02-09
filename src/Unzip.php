@@ -12,6 +12,7 @@ class Unzip extends ZipArchive
     /**
      * Extract the current zip file, only extracting the files that match at
      * least one of the supplied filters
+     *
      * @param  string $destination The path destination to extract the file to
      * @param  array $filters     a list of extensions, regular expressions, or
      *                            callbacks to evaulate the filter process
@@ -44,9 +45,10 @@ class Unzip extends ZipArchive
     }
 
     /**
-     * [createDir description]
-     * @param  [type] $path [description]
-     * @return [type]       [description]
+     * Create the requested path
+     *
+     * @param  string $path absolute path, or relative
+     * @return null
      */
     private function createDir($path)
     {
@@ -59,6 +61,7 @@ class Unzip extends ZipArchive
 
     /**
      * Match the file name to one of the filters
+     *
      * @param  string $filename
      * @param  array  $filters
      * @return int array index of matched filter, or false for no match
@@ -79,5 +82,4 @@ class Unzip extends ZipArchive
         }
         return false;
     }
-
 }
